@@ -16,7 +16,8 @@ namespace EMSC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EMSC());
+            // Application.Run(new EMSC());
+            Application.Run(new Main_PIX());
         }
     }
 }

@@ -215,5 +215,7 @@ namespace EMSC
                 MessageBox.Show("Folder you try to open is no longer at its location", "Folder Location Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+    
     }
 }

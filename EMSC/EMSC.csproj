@@ -139,6 +139,12 @@
     <Compile Include="FlagRelay.Designer.cs">
       <DependentUpon>FlagRelay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main PIX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main PIX.Designer.cs">
+      <DependentUpon>Main PIX.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,12 @@
     </Compile>
     <Compile Include="Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PIX Electric.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIX Electric.Designer.cs">
+      <DependentUpon>PIX Electric.cs</DependentUpon>
     </Compile>
     <Compile Include="PIX.cs">
       <SubType>Form</SubType>
@@ -288,6 +300,9 @@
     <EmbeddedResource Include="FlagRelay.resx">
       <DependentUpon>FlagRelay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Main PIX.resx">
+      <DependentUpon>Main PIX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIX Electric.resx">
+      <DependentUpon>PIX Electric.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PIX.resx">
       <DependentUpon>PIX.cs</DependentUpon>
