@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4AD48D7-B2AF-4982-86CD-7E574E8209D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EMSC</RootNamespace>
+    <AssemblyName>EMSC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_Button_Power_On-01_1221852.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDB.cs" />
+    <Compile Include="AccessDBC.cs" />
+    <Compile Include="Additiona_coils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Additiona_coils.designer.cs">
+      <DependentUpon>Additiona_coils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuxConsol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuxConsol.Designer.cs">
+      <DependentUpon>AuxConsol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuxLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuxLock.Designer.cs">
+      <DependentUpon>AuxLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuxTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuxTrip.Designer.cs">
+      <DependentUpon>AuxTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxulary_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auxulary_menu.Designer.cs">
+      <DependentUpon>Auxulary_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Circuit_Breaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Circuit_Breaker.designer.cs">
+      <DependentUpon>Circuit_Breaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Circuit_Breaker_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Circuit_Breaker_menu.Designer.cs">
+      <DependentUpon>Circuit_Breaker_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commnet.Designer.cs">
+      <DependentUpon>Commnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAuxiliaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlAuxiliaries.Designer.cs">
+      <DependentUpon>ControlAuxiliaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTMCSET123.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTMCSET123.Designer.cs">
+      <DependentUpon>CTMCSET123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTOther.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTOther.Designer.cs">
+      <DependentUpon>CTOther.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CTView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CTView.Designer.cs">
+      <DependentUpon>CTView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_Location.Designer.cs">
+      <DependentUpon>DB_Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_interface.cs" />
+    <Compile Include="FlagRelay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlagRelay.Designer.cs">
+      <DependentUpon>FlagRelay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LF123.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LF123.Designer.cs">
+      <DependentUpon>LF123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternalLighting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalLighting.Designer.cs">
+      <DependentUpon>InternalLighting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCSET4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MCSET4.Designer.cs">
+      <DependentUpon>MCSET4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCST123.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MCST123.Designer.cs">
+      <DependentUpon>MCST123.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniatureCircuit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniatureCircuit.Designer.cs">
+      <DependentUpon>MiniatureCircuit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVR.Designer.cs">
+      <DependentUpon>MVR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PIX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIX.Designer.cs">
+      <DependentUpon>PIX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Metering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metering.Designer.cs">
+      <DependentUpon>Metering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectionRelaysMetering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProtectionRelaysMetering.Designer.cs">
+      <DependentUpon>ProtectionRelaysMetering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Save.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Save.Designer.cs">
+      <DependentUpon>Save.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SF1_SF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SF1_SF2.Designer.cs">
+      <DependentUpon>SF1_SF2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SM6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SM6.Designer.cs">
+      <DependentUpon>SM6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Smart.cs" />
+    <Compile Include="Standard_Sheets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Standard_Sheets.Designer.cs">
+      <DependentUpon>Standard_Sheets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToExcel.cs" />
+    <Compile Include="ToExcelC.cs" />
+    <Compile Include="UpdateTool.cs" />
+    <Compile Include="Voltage_Transformers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voltage_Transformers.Designer.cs">
+      <DependentUpon>Voltage_Transformers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Additiona_coils.resx">
+      <DependentUpon>Additiona_coils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuxConsol.resx">
+      <DependentUpon>AuxConsol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuxLock.resx">
+      <DependentUpon>AuxLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuxTrip.resx">
+      <DependentUpon>AuxTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auxulary_menu.resx">
+      <DependentUpon>Auxulary_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Circuit_Breaker.resx">
+      <DependentUpon>Circuit_Breaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Circuit_Breaker_menu.resx">
+      <DependentUpon>Circuit_Breaker_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commnet.resx">
+      <DependentUpon>Commnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAuxiliaries.resx">
+      <DependentUpon>ControlAuxiliaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTMCSET123.resx">
+      <DependentUpon>CTMCSET123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTOther.resx">
+      <DependentUpon>CTOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTView.resx">
+      <DependentUpon>CTView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB_Location.resx">
+      <DependentUpon>DB_Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlagRelay.resx">
+      <DependentUpon>FlagRelay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LF123.resx">
+      <DependentUpon>LF123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternalLighting.resx">
+      <DependentUpon>InternalLighting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCSET4.resx">
+      <DependentUpon>MCSET4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCST123.resx">
+      <DependentUpon>MCST123.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniatureCircuit.resx">
+      <DependentUpon>MiniatureCircuit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVR.resx">
+      <DependentUpon>MVR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIX.resx">
+      <DependentUpon>PIX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metering.resx">
+      <DependentUpon>Metering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProtectionRelaysMetering.resx">
+      <DependentUpon>ProtectionRelaysMetering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Save.resx">
+      <DependentUpon>Save.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SF1_SF2.resx">
+      <DependentUpon>SF1_SF2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SM6.resx">
+      <DependentUpon>SM6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Standard_Sheets.resx">
+      <DependentUpon>Standard_Sheets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voltage_Transformers.resx">
+      <DependentUpon>Voltage_Transformers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10352352_325661004294762_4937782865921221309_n1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MVRef11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CBsfinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection end1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection end2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection end1111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protection end3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relays.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relayst.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pic11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LLLLFFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CB11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Auxualry11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\breaker111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MNN1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_Button_Power_On-01_1221852.ico" />
+    <Content Include="MVR.ico" />
+    <None Include="Resources\pixX1.png" />
+    <None Include="Resources\SM6x1.png" />
+    <None Include="Resources\MCSET4x1.png" />
+    <None Include="Resources\MCSET123.png" />
+    <None Include="Resources\Lampsx1.png" />
+    <None Include="Resources\Lamps.png" />
+    <None Include="Resources\Flag RelayTallx1 .png" />
+    <None Include="Resources\Control Componentsx1.png" />
+    <None Include="Resources\Control Components.png" />
+    <None Include="Resources\Protection Relayx1.png" />
+    <None Include="Resources\voltage trs view.png" />
+    <None Include="Resources\CT View.png" />
+    <None Include="Resources\CT MCSET123.png" />
+    <None Include="Resources\CT MCSET4.png" />
+    <None Include="Resources\LPCTx1.png" />
+    <None Include="Resources\LPCT.jpg" />
+    <None Include="Resources\KEYx1.png" />
+    <None Include="Resources\LORx1.png" />
+    <None Include="Resources\TCS2.png" />
+    <None Include="Resources\Control_Auxularies.png" />
+    <None Include="Resources\CB112.png" />
+    <None Include="Resources\Picture22.png" />
+    <None Include="Resources\Protection Relay2.png" />
+    <None Include="Resources\Protection Relay.png" />
+    <None Include="Resources\Circuit breakers.png" />
+    <None Include="Resources\Metering devices2.png" />
+    <None Include="Resources\Metering devices.png" />
+    <None Include="Resources\Control Auxularies Final.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

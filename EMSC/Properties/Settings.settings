@@ -1,0 +1,74 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EMSC.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LF123ADD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\Circuit Breakers\SF - LF OFFER STRUCTURE 2013\ADD LF Withdrawable</Value>
+    </Setting>
+    <Setting Name="LocalDB" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\MV.accdb&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\MV.accdb</Value>
+    </Setting>
+    <Setting Name="LF123CAT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\Share\TDO-Quality Improvement\EMSC - TOOL\Catalogues\LF 123</Value>
+    </Setting>
+    <Setting Name="HVXADD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\PIX ROF\01 BOM\0.2 Configuration Tool</Value>
+    </Setting>
+    <Setting Name="HVXCAT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\C.B\HVx\CB</Value>
+    </Setting>
+    <Setting Name="SFADD" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\Circuit Breakers\SF - LF OFFER STRUCTURE 2013\ADD_SF\SF_MCset4</Value>
+    </Setting>
+    <Setting Name="SFCAT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\C.B\SF1,SF2</Value>
+    </Setting>
+    <Setting Name="LF123file" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\Circuit Breakers\SF - LF OFFER STRUCTURE 2013\ADD LF Withdrawable\SOCLE _ 01-CB LF withdrawable frontal for MCset.pdf</Value>
+    </Setting>
+    <Setting Name="HVXfile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\PIX ROF\01 BOM\0.2 Configuration Tool\CB Template REV5.02 _ 2 May 2018.xlsx</Value>
+    </Setting>
+    <Setting Name="ProtectionCAT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\C.B\Protection Relays</Value>
+    </Setting>
+    <Setting Name="SFfile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\afeg0010\R&amp;D\MT\Circuit Breakers\SF - LF OFFER STRUCTURE 2013\ADD_SF\SF_MCset4\SF WITHDRAWABLE FOR MCset4 IEC V02.02.xlsm</Value>
+    </Setting>
+    <Setting Name="RemoteDB" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\waeg00202\Share\TDO-Quality Improvement\EMSC - TOOL\DB\MV.accdb&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\waeg00202\Share\TDO-Quality Improvement\EMSC - TOOL\DB\MV.accdb</Value>
+    </Setting>
+    <Setting Name="Remote_file" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\DB\MV.accdb</Value>
+    </Setting>
+    <Setting Name="AmeterFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\OUR (Optimum References)\Current\Ammeter Scales &amp; Ammeters (Karim Aly)\standard Ammeter Scales &amp; Ammeters.xlsx</Value>
+    </Setting>
+    <Setting Name="LampFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\OUR (Optimum References)\Current\Lamps, Pushbuttons, Selector switches (Mohamed Ramadan)\Standard Lamps , Selectors &amp; PB.xlsx</Value>
+    </Setting>
+    <Setting Name="Internal_Lighting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\C.B\Internal Lighting\Internal Lighting for MV SWGRs.xlsx</Value>
+    </Setting>
+    <Setting Name="ControlAux" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpdateLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\waeg00202\share\TDO-Quality Improvement\EMSC - TOOL\DB</Value>
+    </Setting>
+    <Setting Name="UpdateVersion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.01.01</Value>
+    </Setting>
+    <Setting Name="UpdateFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MVRX64.msi</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
