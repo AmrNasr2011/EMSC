@@ -353,7 +353,7 @@
             // table
             // 
             this.table.AutoSize = true;
-            this.table.Location = new System.Drawing.Point(627, 31);
+            this.table.Location = new System.Drawing.Point(558, 31);
             this.table.Name = "table";
             this.table.Size = new System.Drawing.Size(63, 13);
             this.table.TabIndex = 239;
