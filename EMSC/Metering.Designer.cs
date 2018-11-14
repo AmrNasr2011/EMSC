@@ -56,6 +56,8 @@
             this.Des7 = new System.Windows.Forms.ComboBox();
             this.to_catelog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Reset1 = new System.Windows.Forms.Button();
+            this.Reset2 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,6 +99,7 @@
             this.groupBox3.Controls.Add(this.linkLabel3);
             this.groupBox3.Controls.Add(this.Qty3);
             this.groupBox3.Controls.Add(this.Ref3);
+            this.groupBox3.Controls.Add(this.Reset1);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.Des6);
             this.groupBox3.Controls.Add(this.Des5);
@@ -245,6 +248,7 @@
             this.groupBox4.Controls.Add(this.linkLabel4);
             this.groupBox4.Controls.Add(this.Qty4);
             this.groupBox4.Controls.Add(this.Ref4);
+            this.groupBox4.Controls.Add(this.Reset2);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.Des8);
             this.groupBox4.Controls.Add(this.Des7);
@@ -395,6 +399,30 @@
             this.pictureBox1.TabIndex = 250;
             this.pictureBox1.TabStop = false;
             // 
+            // Reset1
+            // 
+            this.Reset1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset1.ForeColor = System.Drawing.Color.Black;
+            this.Reset1.Location = new System.Drawing.Point(636, 74);
+            this.Reset1.Name = "Reset1";
+            this.Reset1.Size = new System.Drawing.Size(67, 27);
+            this.Reset1.TabIndex = 235;
+            this.Reset1.Text = "Reset";
+            this.Reset1.UseVisualStyleBackColor = true;
+            this.Reset1.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Reset2
+            // 
+            this.Reset2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset2.ForeColor = System.Drawing.Color.Black;
+            this.Reset2.Location = new System.Drawing.Point(636, 77);
+            this.Reset2.Name = "Reset2";
+            this.Reset2.Size = new System.Drawing.Size(67, 27);
+            this.Reset2.TabIndex = 236;
+            this.Reset2.Text = "Reset";
+            this.Reset2.UseVisualStyleBackColor = true;
+            this.Reset2.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Metering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,5 +483,7 @@
         private System.Windows.Forms.Button SheetOpen;
         private System.Windows.Forms.Button to_catelog;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Reset1;
+        private System.Windows.Forms.Button Reset2;
     }
 }

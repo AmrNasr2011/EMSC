@@ -36,9 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Configure_Electric = new System.Windows.Forms.Button();
+            this.Configure_Mechanical = new System.Windows.Forms.Button();
             this.table = new System.Windows.Forms.Label();
+            this.Generate_Reports = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,23 +122,23 @@
             this.textBox2.Size = new System.Drawing.Size(263, 20);
             this.textBox2.TabIndex = 245;
             // 
-            // button1
+            // Configure_Electric
             // 
-            this.button1.Location = new System.Drawing.Point(107, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(284, 198);
-            this.button1.TabIndex = 246;
-            this.button1.Text = "Configure Electric";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Configure_Electric.Location = new System.Drawing.Point(107, 195);
+            this.Configure_Electric.Name = "Configure_Electric";
+            this.Configure_Electric.Size = new System.Drawing.Size(284, 198);
+            this.Configure_Electric.TabIndex = 246;
+            this.Configure_Electric.Text = "Configure Electric";
+            this.Configure_Electric.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Configure_Mechanical
             // 
-            this.button2.Location = new System.Drawing.Point(502, 195);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(284, 198);
-            this.button2.TabIndex = 247;
-            this.button2.Text = "Configure Mechanical";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Configure_Mechanical.Location = new System.Drawing.Point(502, 195);
+            this.Configure_Mechanical.Name = "Configure_Mechanical";
+            this.Configure_Mechanical.Size = new System.Drawing.Size(284, 198);
+            this.Configure_Mechanical.TabIndex = 247;
+            this.Configure_Mechanical.Text = "Configure Mechanical";
+            this.Configure_Mechanical.UseVisualStyleBackColor = true;
             // 
             // table
             // 
@@ -149,15 +150,25 @@
             this.table.Text = "Main_PIX";
             this.table.Visible = false;
             // 
+            // Generate_Reports
+            // 
+            this.Generate_Reports.Location = new System.Drawing.Point(640, 497);
+            this.Generate_Reports.Name = "Generate_Reports";
+            this.Generate_Reports.Size = new System.Drawing.Size(284, 52);
+            this.Generate_Reports.TabIndex = 251;
+            this.Generate_Reports.Text = "Generate Reports";
+            this.Generate_Reports.UseVisualStyleBackColor = true;
+            // 
             // Main_PIX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(205)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(936, 561);
+            this.Controls.Add(this.Generate_Reports);
             this.Controls.Add(this.table);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Configure_Mechanical);
+            this.Controls.Add(this.Configure_Electric);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -184,8 +195,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Configure_Electric;
+        private System.Windows.Forms.Button Configure_Mechanical;
         private System.Windows.Forms.Label table;
+        private System.Windows.Forms.Button Generate_Reports;
     }
 }

@@ -40,7 +40,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.protection_relay = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Manu_PIX = new System.Windows.Forms.Button();
             this.auxulary_menu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.version = new System.Windows.Forms.Label();
@@ -212,23 +212,23 @@
             this.protection_relay.UseVisualStyleBackColor = false;
             this.protection_relay.Click += new System.EventHandler(this.protection_relay_Click);
             // 
-            // button3
+            // Manu_PIX
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Image = global::EMSC.Properties.Resources.Circuit_breakers;
-            this.button3.Location = new System.Drawing.Point(12, 68);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 233);
-            this.button3.TabIndex = 213;
-            this.button3.Tag = "asd";
-            this.button3.Text = "\r\nCircuit Breaker";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.Manu_PIX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.Manu_PIX.FlatAppearance.BorderSize = 0;
+            this.Manu_PIX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Manu_PIX.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Manu_PIX.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Manu_PIX.Image = global::EMSC.Properties.Resources.Circuit_breakers;
+            this.Manu_PIX.Location = new System.Drawing.Point(12, 68);
+            this.Manu_PIX.Name = "Manu_PIX";
+            this.Manu_PIX.Size = new System.Drawing.Size(202, 233);
+            this.Manu_PIX.TabIndex = 213;
+            this.Manu_PIX.Tag = "asd";
+            this.Manu_PIX.Text = "PIX";
+            this.Manu_PIX.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Manu_PIX.UseVisualStyleBackColor = false;
+            this.Manu_PIX.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // auxulary_menu
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.protection_relay);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Manu_PIX);
             this.Controls.Add(this.auxulary_menu);
             this.Controls.Add(this.DB_status);
             this.Controls.Add(this.label3);
@@ -312,7 +312,7 @@
         private System.Windows.Forms.Label DB_status;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button auxulary_menu;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Manu_PIX;
         private System.Windows.Forms.Button protection_relay;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button CompleteSolution;

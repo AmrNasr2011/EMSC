@@ -39,8 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -101,6 +103,12 @@
     </Compile>
     <Compile Include="Commnet.Designer.cs">
       <DependentUpon>Commnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configure Electrical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configure Electrical.Designer.cs">
+      <DependentUpon>Configure Electrical.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlAuxiliaries.cs">
       <SubType>Form</SubType>
@@ -281,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Commnet.resx">
       <DependentUpon>Commnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configure Electrical.resx">
+      <DependentUpon>Configure Electrical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlAuxiliaries.resx">
       <DependentUpon>ControlAuxiliaries.cs</DependentUpon>
