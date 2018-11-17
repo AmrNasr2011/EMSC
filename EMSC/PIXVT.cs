@@ -10,16 +10,26 @@ using System.Windows.Forms;
 
 namespace EMSC
 {
-    public partial class PIX : Form
+    public partial class PIXVT : Form
     {
+        static bool Status = false; //represent status if form has data = true otherwise = false@
+        static bool intialized = false;//table of fields initalized@
+        public static DataTable Fieldtable;//table that will contain all history of windowform@
+        int current = 0;
+
         string NoteCol;
-        public PIX()
+
+        public PIXVT()
         {
             InitializeComponent();
         }
-
+    
         private void Des1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             Des2.DataSource = aa.GetData(aa.Dic_in, table.Text, Des2.Tag.ToString());//data source accept list
@@ -27,6 +37,10 @@ namespace EMSC
 
         private void Des2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -35,6 +49,10 @@ namespace EMSC
 
         private void Des3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -44,6 +62,10 @@ namespace EMSC
 
         private void Des4_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -54,6 +76,10 @@ namespace EMSC
 
         private void Des5_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -65,6 +91,10 @@ namespace EMSC
 
         private void Des6_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -77,6 +107,10 @@ namespace EMSC
 
         private void Des7_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des1.Tag.ToString(), Des1.Text);
             aa.Dic_in.Add(Des2.Tag.ToString(), Des2.Text);
@@ -111,6 +145,10 @@ namespace EMSC
 
         private void Des8_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
             aa.Dic_in.Add(Des8.Tag.ToString(), Des8.Text);
             Des9.DataSource = aa.GetData(aa.Dic_in, table.Text, Des9.Tag.ToString());//data source accept list
@@ -118,8 +156,11 @@ namespace EMSC
 
         private void Des9_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ContainerActions.DisableInterupt)
+            {
+                return;
+            }
             AccessDB aa = new AccessDB();
-
             aa.Dic_in.Add(Des8.Tag.ToString(), Des8.Text);
             aa.Dic_in.Add(Des9.Tag.ToString(), Des9.Text);
             if (Des9.SelectedIndex > 0)
@@ -191,8 +232,15 @@ namespace EMSC
             NoteCol = colomn_name[11];
             Des1.DataSource = aa.GetData(aa.Dic_in, table.Text, Des1.Tag.ToString());//data source accept list
             Des8.DataSource = aa.GetData(aa.Dic_in, table.Text, Des8.Tag.ToString());//data source accept list
-                                                                                     // Des5.DataSource = aa.GetData(aa.Dic_in, table.Text, Des5.Tag.ToString());//data source accept list
-
+            //@
+            if (! intialized)
+            {
+                Fieldtable = ContainerActions.AllcontrolNamesToDatatable(this);
+                intialized = true;
+            }
+            current = Fieldtable.Rows.Count;
+            index.Text = string.Format("{0} / {1}", Fieldtable.Rows.Count, current);
+           //@
         }
 
         private void to_catelog_Click(object sender, EventArgs e)
@@ -215,7 +263,180 @@ namespace EMSC
                 MessageBox.Show("Folder you try to open is no longer at its location", "Folder Location Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //@
+        private void Reset1_Click(object sender, EventArgs e)
+        {
+            //need to make generic function to loop over all control component in this groupbox and remove text
+            //of all combobox and text box
+            ContainerActions.ClearGroupBox((GroupBox)((Button)sender).Parent);
+        }
 
-    
+        private void Reset2_Click(object sender, EventArgs e)
+        {
+            ContainerActions.ClearGroupBox((GroupBox)((Button)sender).Parent);
+        }
+
+        private void Next_Click(object sender, EventArgs e)
+        {
+            if (current == Fieldtable.Rows.Count)
+            {//here no next exist
+                return;
+            }
+            else if (current == Fieldtable.Rows.Count-1)
+            {
+                current++;
+                ContainerActions.ClearFieldsInForm(this);
+                updateStatus();
+
+            }else
+            {
+                //load specific row to data fields
+                current++;
+                ContainerActions.LoadFieldsFromRow(this,Fieldtable.Rows[current+1]);
+                updateStatus();
+            }
+
+        }
+        void updateStatus()
+        {
+            index.Text = string.Format("{0} / {1}", Fieldtable.Rows.Count, current);
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            if (current==0)
+            {
+                return;//no value remaining
+            }
+            else
+            {
+                current--;
+                ContainerActions.LoadFieldsFromRow(this, Fieldtable.Rows[current]);
+                updateStatus();
+            }
+        }
+
+        private void Save_Next_Click(object sender, EventArgs e)
+        {
+            if (!ContainerActions.CheckSelectionhappen(this))
+            {//here two cases may happed
+                //1 at last so no need to make any update
+                //before last so this lead to cancel already made form
+                if (current == Fieldtable.Rows.Count)
+                {
+                    MessageBox.Show("Kindly make selection for reference");
+                    return;
+                }
+                else
+                {
+                    //show no modification happened here do you want to delete 
+                    DialogResult dialogResult = MessageBox.Show("No modification happen on this screen do you want to delete it", "Form Deletion", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        //delete row at index
+                        Fieldtable.Rows.RemoveAt(current );
+                        if (current == Fieldtable.Rows.Count)
+                        {
+                            ContainerActions.ClearFieldsInForm(this);
+
+                        }
+                        else
+                        {
+                            ContainerActions.LoadFieldsFromRow(this, Fieldtable.Rows[current ]);
+                        }
+                        updateStatus();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+               
+            }
+            else if(current == Fieldtable.Rows.Count)//last element
+	        {
+                ContainerActions.SaveFields(this, ref Fieldtable);
+                current++;
+                updateStatus();
+                ContainerActions.ClearFieldsInForm(this);
+            }
+            else
+            {
+                //here i need to update 
+                ContainerActions.UpdateFieldsInForm(this, Fieldtable,current);
+
+                Next.PerformClick();////
+            }
+        }
+
+        private void Save_Close_Click(object sender, EventArgs e)
+        {
+            if (!ContainerActions.CheckSelectionhappen(this))
+            {//here two cases may happed
+                //1 at last so no need to make any update
+                //before last so this lead to cancel already made form
+                if (current == Fieldtable.Rows.Count)
+                {
+                    CloseForm();
+                }
+                else
+                {
+                    //show no modification happened here do you want to delete 
+                    DialogResult dialogResult = MessageBox.Show("No modification happen on this screen do you want to delete it", "Form Deletion", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        //delete row at index
+                        Fieldtable.Rows.RemoveAt(current);
+                        if (current == Fieldtable.Rows.Count)
+                        {
+                            ContainerActions.ClearFieldsInForm(this);
+
+                        }
+                        else
+                        {
+                            ContainerActions.LoadFieldsFromRow(this, Fieldtable.Rows[current]);
+                        }
+                        CloseForm();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+
+            }
+            else if (current == Fieldtable.Rows.Count)//last element
+            {
+                ContainerActions.SaveFields(this, ref Fieldtable);
+                CloseForm();
+            }
+            else
+            {
+                //here i need to update 
+                ContainerActions.UpdateFieldsInForm(this, Fieldtable, current);
+
+                CloseForm();
+            }
+        }
+        void CloseForm()
+        {
+            bool check;
+            DialogResult dialogResult = MessageBox.Show("Do you want to close this Selection Form", "Form Closing", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (Fieldtable.Rows.Count>0)
+                {
+                    check = true;
+                }
+                else
+                {
+                    check = false;
+                }
+                ContainerActions.FormStatus= check;
+                this.Close();
+
+            }
+            //@
+        }
     }
 }

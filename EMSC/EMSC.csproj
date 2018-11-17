@@ -110,6 +110,7 @@
     <Compile Include="Configure Electrical.Designer.cs">
       <DependentUpon>Configure Electrical.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContainerActions.cs" />
     <Compile Include="ControlAuxiliaries.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,11 +208,11 @@
     <Compile Include="PIX Electric.Designer.cs">
       <DependentUpon>PIX Electric.cs</DependentUpon>
     </Compile>
-    <Compile Include="PIX.cs">
+    <Compile Include="PIXVT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PIX.Designer.cs">
-      <DependentUpon>PIX.cs</DependentUpon>
+    <Compile Include="PIXVT.Designer.cs">
+      <DependentUpon>PIXVT.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -341,8 +342,8 @@
     <EmbeddedResource Include="PIX Electric.resx">
       <DependentUpon>PIX Electric.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PIX.resx">
-      <DependentUpon>PIX.cs</DependentUpon>
+    <EmbeddedResource Include="PIXVT.resx">
+      <DependentUpon>PIXVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -37,7 +37,7 @@ namespace EMSC
 
         private void PIX_Click(object sender, EventArgs e)
         {
-            PIX std = new PIX();
+            PIXVT std = new PIXVT();
             this.Visible = false;
             std.ShowDialog();
 

@@ -1,6 +1,6 @@
 ﻿namespace EMSC
 {
-    partial class PIX
+    partial class PIXVT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PIX));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PIXVT));
             this.table = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Ref2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.Reset2 = new System.Windows.Forms.Button();
             this.Add2 = new System.Windows.Forms.Button();
             this.Des9 = new System.Windows.Forms.ComboBox();
             this.Des8 = new System.Windows.Forms.ComboBox();
@@ -59,11 +60,17 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Ref1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.Reset1 = new System.Windows.Forms.Button();
             this.Add1 = new System.Windows.Forms.Button();
             this.Des2 = new System.Windows.Forms.ComboBox();
             this.Des1 = new System.Windows.Forms.ComboBox();
             this.to_catelog = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Back = new System.Windows.Forms.Button();
+            this.Next = new System.Windows.Forms.Button();
+            this.index = new System.Windows.Forms.Label();
+            this.Save_Next = new System.Windows.Forms.Button();
+            this.Save_Close = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +95,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.Ref2);
             this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.Reset2);
             this.groupBox2.Controls.Add(this.Add2);
             this.groupBox2.Controls.Add(this.Des9);
             this.groupBox2.Controls.Add(this.Des8);
@@ -131,7 +139,7 @@
             this.Qty2.Location = new System.Drawing.Point(340, 108);
             this.Qty2.Name = "Qty2";
             this.Qty2.Size = new System.Drawing.Size(50, 23);
-            this.Qty2.TabIndex = 233;
+            this.Qty2.TabIndex = 15;
             // 
             // label12
             // 
@@ -157,11 +165,12 @@
             // 
             // Ref2
             // 
+            this.Ref2.AccessibleDescription = "Ref";
             this.Ref2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ref2.Location = new System.Drawing.Point(340, 81);
             this.Ref2.Name = "Ref2";
             this.Ref2.Size = new System.Drawing.Size(288, 23);
-            this.Ref2.TabIndex = 229;
+            this.Ref2.TabIndex = 14;
             this.Ref2.Tag = "reference";
             // 
             // label14
@@ -175,6 +184,18 @@
             this.label14.TabIndex = 235;
             this.label14.Text = "Quantity";
             // 
+            // Reset2
+            // 
+            this.Reset2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset2.ForeColor = System.Drawing.Color.Black;
+            this.Reset2.Location = new System.Drawing.Point(488, 112);
+            this.Reset2.Name = "Reset2";
+            this.Reset2.Size = new System.Drawing.Size(67, 27);
+            this.Reset2.TabIndex = 17;
+            this.Reset2.Text = "Reset";
+            this.Reset2.UseVisualStyleBackColor = true;
+            this.Reset2.Click += new System.EventHandler(this.Reset2_Click);
+            // 
             // Add2
             // 
             this.Add2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +203,7 @@
             this.Add2.Location = new System.Drawing.Point(561, 112);
             this.Add2.Name = "Add2";
             this.Add2.Size = new System.Drawing.Size(67, 27);
-            this.Add2.TabIndex = 230;
+            this.Add2.TabIndex = 16;
             this.Add2.Text = "Add";
             this.Add2.UseVisualStyleBackColor = true;
             this.Add2.Click += new System.EventHandler(this.Add2_Click);
@@ -196,7 +217,7 @@
             this.Des9.Location = new System.Drawing.Point(340, 54);
             this.Des9.Name = "Des9";
             this.Des9.Size = new System.Drawing.Size(288, 23);
-            this.Des9.TabIndex = 227;
+            this.Des9.TabIndex = 13;
             this.Des9.SelectedIndexChanged += new System.EventHandler(this.Des9_SelectedIndexChanged);
             // 
             // Des8
@@ -208,7 +229,7 @@
             this.Des8.Location = new System.Drawing.Point(340, 27);
             this.Des8.Name = "Des8";
             this.Des8.Size = new System.Drawing.Size(288, 23);
-            this.Des8.TabIndex = 226;
+            this.Des8.TabIndex = 12;
             this.Des8.SelectedIndexChanged += new System.EventHandler(this.Des8_SelectedIndexChanged);
             // 
             // groupBox1
@@ -230,6 +251,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.Ref1);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.Reset1);
             this.groupBox1.Controls.Add(this.Add1);
             this.groupBox1.Controls.Add(this.Des2);
             this.groupBox1.Controls.Add(this.Des1);
@@ -262,7 +284,7 @@
             this.Des6.Location = new System.Drawing.Point(340, 157);
             this.Des6.Name = "Des6";
             this.Des6.Size = new System.Drawing.Size(288, 23);
-            this.Des6.TabIndex = 246;
+            this.Des6.TabIndex = 6;
             this.Des6.SelectedIndexChanged += new System.EventHandler(this.Des6_SelectedIndexChanged);
             // 
             // Des7
@@ -274,7 +296,7 @@
             this.Des7.Location = new System.Drawing.Point(340, 184);
             this.Des7.Name = "Des7";
             this.Des7.Size = new System.Drawing.Size(288, 23);
-            this.Des7.TabIndex = 245;
+            this.Des7.TabIndex = 7;
             this.Des7.SelectedIndexChanged += new System.EventHandler(this.Des7_SelectedIndexChanged);
             // 
             // label18
@@ -352,7 +374,7 @@
             this.Qty1.Location = new System.Drawing.Point(340, 238);
             this.Qty1.Name = "Qty1";
             this.Qty1.Size = new System.Drawing.Size(50, 23);
-            this.Qty1.TabIndex = 233;
+            this.Qty1.TabIndex = 9;
             // 
             // Des5
             // 
@@ -363,7 +385,7 @@
             this.Des5.Location = new System.Drawing.Point(340, 130);
             this.Des5.Name = "Des5";
             this.Des5.Size = new System.Drawing.Size(288, 23);
-            this.Des5.TabIndex = 232;
+            this.Des5.TabIndex = 5;
             this.Des5.SelectedIndexChanged += new System.EventHandler(this.Des5_SelectedIndexChanged);
             // 
             // Des4
@@ -375,7 +397,7 @@
             this.Des4.Location = new System.Drawing.Point(340, 103);
             this.Des4.Name = "Des4";
             this.Des4.Size = new System.Drawing.Size(288, 23);
-            this.Des4.TabIndex = 231;
+            this.Des4.TabIndex = 4;
             this.Des4.SelectedIndexChanged += new System.EventHandler(this.Des4_SelectedIndexChanged);
             // 
             // label1
@@ -398,7 +420,7 @@
             this.Des3.Location = new System.Drawing.Point(340, 76);
             this.Des3.Name = "Des3";
             this.Des3.Size = new System.Drawing.Size(288, 23);
-            this.Des3.TabIndex = 228;
+            this.Des3.TabIndex = 3;
             this.Des3.SelectedIndexChanged += new System.EventHandler(this.Des3_SelectedIndexChanged);
             // 
             // label5
@@ -414,11 +436,12 @@
             // 
             // Ref1
             // 
+            this.Ref1.AccessibleDescription = "Ref";
             this.Ref1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ref1.Location = new System.Drawing.Point(340, 211);
             this.Ref1.Name = "Ref1";
             this.Ref1.Size = new System.Drawing.Size(288, 23);
-            this.Ref1.TabIndex = 229;
+            this.Ref1.TabIndex = 8;
             this.Ref1.Tag = "reference";
             // 
             // label7
@@ -432,6 +455,18 @@
             this.label7.TabIndex = 235;
             this.label7.Text = "Quantity";
             // 
+            // Reset1
+            // 
+            this.Reset1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset1.ForeColor = System.Drawing.Color.Black;
+            this.Reset1.Location = new System.Drawing.Point(488, 241);
+            this.Reset1.Name = "Reset1";
+            this.Reset1.Size = new System.Drawing.Size(67, 27);
+            this.Reset1.TabIndex = 11;
+            this.Reset1.Text = "Reset";
+            this.Reset1.UseVisualStyleBackColor = true;
+            this.Reset1.Click += new System.EventHandler(this.Reset1_Click);
+            // 
             // Add1
             // 
             this.Add1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,7 +474,7 @@
             this.Add1.Location = new System.Drawing.Point(561, 241);
             this.Add1.Name = "Add1";
             this.Add1.Size = new System.Drawing.Size(67, 27);
-            this.Add1.TabIndex = 230;
+            this.Add1.TabIndex = 10;
             this.Add1.Text = "Add";
             this.Add1.UseVisualStyleBackColor = true;
             this.Add1.Click += new System.EventHandler(this.Add1_Click);
@@ -453,7 +488,7 @@
             this.Des2.Location = new System.Drawing.Point(340, 49);
             this.Des2.Name = "Des2";
             this.Des2.Size = new System.Drawing.Size(288, 23);
-            this.Des2.TabIndex = 227;
+            this.Des2.TabIndex = 2;
             this.Des2.SelectedIndexChanged += new System.EventHandler(this.Des2_SelectedIndexChanged);
             // 
             // Des1
@@ -465,7 +500,7 @@
             this.Des1.Location = new System.Drawing.Point(340, 22);
             this.Des1.Name = "Des1";
             this.Des1.Size = new System.Drawing.Size(288, 23);
-            this.Des1.TabIndex = 226;
+            this.Des1.TabIndex = 1;
             this.Des1.SelectedIndexChanged += new System.EventHandler(this.Des1_SelectedIndexChanged);
             // 
             // to_catelog
@@ -495,20 +530,85 @@
             this.pictureBox1.TabIndex = 253;
             this.pictureBox1.TabStop = false;
             // 
-            // PIX
+            // Back
+            // 
+            this.Back.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.Color.Black;
+            this.Back.Location = new System.Drawing.Point(96, 505);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(67, 27);
+            this.Back.TabIndex = 245;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Next
+            // 
+            this.Next.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Next.ForeColor = System.Drawing.Color.Black;
+            this.Next.Location = new System.Drawing.Point(220, 505);
+            this.Next.Name = "Next";
+            this.Next.Size = new System.Drawing.Size(67, 27);
+            this.Next.TabIndex = 254;
+            this.Next.Text = "Next";
+            this.Next.UseVisualStyleBackColor = true;
+            this.Next.Click += new System.EventHandler(this.Next_Click);
+            // 
+            // index
+            // 
+            this.index.AutoSize = true;
+            this.index.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.index.ForeColor = System.Drawing.Color.Black;
+            this.index.Location = new System.Drawing.Point(176, 509);
+            this.index.Name = "index";
+            this.index.Size = new System.Drawing.Size(28, 18);
+            this.index.TabIndex = 245;
+            this.index.Text = "0/0";
+            // 
+            // Save_Next
+            // 
+            this.Save_Next.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Next.ForeColor = System.Drawing.Color.Black;
+            this.Save_Next.Location = new System.Drawing.Point(336, 505);
+            this.Save_Next.Name = "Save_Next";
+            this.Save_Next.Size = new System.Drawing.Size(93, 27);
+            this.Save_Next.TabIndex = 255;
+            this.Save_Next.Text = "Save && Next";
+            this.Save_Next.UseVisualStyleBackColor = true;
+            this.Save_Next.Click += new System.EventHandler(this.Save_Next_Click);
+            // 
+            // Save_Close
+            // 
+            this.Save_Close.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_Close.ForeColor = System.Drawing.Color.Black;
+            this.Save_Close.Location = new System.Drawing.Point(449, 505);
+            this.Save_Close.Name = "Save_Close";
+            this.Save_Close.Size = new System.Drawing.Size(107, 27);
+            this.Save_Close.TabIndex = 256;
+            this.Save_Close.Text = "Save && Close";
+            this.Save_Close.UseVisualStyleBackColor = true;
+            this.Save_Close.Click += new System.EventHandler(this.Save_Close_Click);
+            // 
+            // PIXVT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(205)))), ((int)(((byte)(86)))));
             this.ClientSize = new System.Drawing.Size(907, 554);
+            this.Controls.Add(this.Save_Close);
+            this.Controls.Add(this.Save_Next);
+            this.Controls.Add(this.index);
+            this.Controls.Add(this.Next);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.to_catelog);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.table);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PIX";
-            this.Text = "PIX";
+            this.Name = "PIXVT";
+            this.Tag = "PIX Voltage Transformers";
+            this.Text = "PIX Voltage Transformers";
             this.Load += new System.EventHandler(this.PIX_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -556,5 +656,12 @@
         private System.Windows.Forms.ComboBox Des1;
         private System.Windows.Forms.Button to_catelog;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Reset2;
+        private System.Windows.Forms.Button Reset1;
+        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.Label index;
+        private System.Windows.Forms.Button Save_Next;
+        private System.Windows.Forms.Button Save_Close;
     }
 }

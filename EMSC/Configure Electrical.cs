@@ -16,5 +16,19 @@ namespace EMSC
         {
             InitializeComponent();
         }
+
+        private void Protection_Relay_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Volatge_Transformers_Click(object sender, EventArgs e)
+        {
+            PIXVT std = new PIXVT();
+            this.Visible = false;
+            std.ShowDialog();
+            Volatge_TransformersCB.Checked = ContainerActions.FormStatus;
+            this.Visible = true;
+        }
     }
 }
